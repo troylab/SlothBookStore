@@ -1,0 +1,23 @@
+﻿@model SlothBookStore.Data.Book
+
+@{
+    ViewData["Title"] = "Book";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-4 mb-5">
+            <h1 class="fa fa-book fa-3x"></h1>
+            <h2 class="row-centered">
+                @Html.DisplayFor(m => Model.Name)<br>
+                <small> $ @Html.DisplayFor(m => Model.Price)</small>
+            </h2>
+            <p>
+                @Html.DisplayFor(m => Model.Author)
+            </p>
+            <p>
+                @Html.DisplayFor(m => Model.Desc)
+            </p>
+        </div>
+    </div>
+</div>

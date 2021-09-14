@@ -1,0 +1,24 @@
+﻿@model IEnumerable<SlothBookStore.Data.Book>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        @foreach(var item in Model)
+        { 
+        <div class="col-4 mb-5">
+            <h2 class="row-centered">
+                @Html.DisplayFor(m => item.Name)<br>
+                <small> $ @Html.DisplayFor(m => item.Price)</small>
+            </h2>
+            <p class="row-centered"><i class="fa fa-book fa-3x"></i></p>
+            <p>
+                @Html.DisplayFor(m => item.Desc)
+            </p>
+            <a href="/book/@item.Id" class="btn btn-primary">Details</a>
+        </div>
+        }
+    </div>
+</div>
