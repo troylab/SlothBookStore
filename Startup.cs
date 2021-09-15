@@ -97,7 +97,7 @@ namespace SlothBookStore
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/api/{name?}", async context =>
+                endpoints.MapGet("/jmeter/{name?}", async context =>
                 {
                     var name = context.Request.RouteValues["name"]?.ToString() ?? "";
                     if (string.IsNullOrWhiteSpace(name))
